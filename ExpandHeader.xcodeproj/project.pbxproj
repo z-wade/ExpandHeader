@@ -13,6 +13,7 @@
 		47A70ECC21AFB5D0002BE2B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47A70ECB21AFB5D0002BE2B9 /* Assets.xcassets */; };
 		47A70ECF21AFB5D0002BE2B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A70ECD21AFB5D0002BE2B9 /* LaunchScreen.storyboard */; };
 		47A70EDA21AFB5D1002BE2B9 /* ExpandHeaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A70ED921AFB5D1002BE2B9 /* ExpandHeaderTests.swift */; };
+		47A70EE621AFB70E002BE2B9 /* UIScrollView+ExpandHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A70EE521AFB70E002BE2B9 /* UIScrollView+ExpandHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		47A70ED521AFB5D1002BE2B9 /* ExpandHeaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpandHeaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A70ED921AFB5D1002BE2B9 /* ExpandHeaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandHeaderTests.swift; sourceTree = "<group>"; };
 		47A70EDB21AFB5D1002BE2B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47A70EE521AFB70E002BE2B9 /* UIScrollView+ExpandHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ExpandHeader.swift"; sourceTree = "<group>"; };
+		47A70EE721AFD1CF002BE2B9 /* ExpandHeader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExpandHeader-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +62,11 @@
 		47A70EB821AFB5CF002BE2B9 = {
 			isa = PBXGroup;
 			children = (
+				47A70EE421AFB6BF002BE2B9 /* Source */,
 				47A70EC321AFB5CF002BE2B9 /* ExpandHeader */,
 				47A70ED821AFB5D1002BE2B9 /* ExpandHeaderTests */,
 				47A70EC221AFB5CF002BE2B9 /* Products */,
+				47A70EE721AFD1CF002BE2B9 /* ExpandHeader-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +99,14 @@
 				47A70EDB21AFB5D1002BE2B9 /* Info.plist */,
 			);
 			path = ExpandHeaderTests;
+			sourceTree = "<group>";
+		};
+		47A70EE421AFB6BF002BE2B9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				47A70EE521AFB70E002BE2B9 /* UIScrollView+ExpandHeader.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +159,7 @@
 				TargetAttributes = {
 					47A70EC021AFB5CF002BE2B9 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					47A70ED421AFB5D1002BE2B9 = {
 						CreatedOnToolsVersion = 10.1;
@@ -198,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47A70EC721AFB5CF002BE2B9 /* ViewController.swift in Sources */,
+				47A70EE621AFB70E002BE2B9 /* UIScrollView+ExpandHeader.swift in Sources */,
 				47A70EC521AFB5CF002BE2B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MKW6K38424;
 				INFOPLIST_FILE = ExpandHeader/Info.plist;
@@ -369,6 +385,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cjz.ExpandHeader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExpandHeader-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -378,6 +396,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MKW6K38424;
 				INFOPLIST_FILE = ExpandHeader/Info.plist;
@@ -387,6 +406,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cjz.ExpandHeader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExpandHeader-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

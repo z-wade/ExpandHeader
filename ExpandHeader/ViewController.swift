@@ -8,13 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UITableViewController {
+    
+    let imageView = UIImageView(image: UIImage(named: "timg"))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        imageView.frame = CGRect(x: 0, y: 0, width: 0, height: 190)
+        tableView.expandHeaderView = imageView
     }
-
 
 }
 
